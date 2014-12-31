@@ -23,6 +23,7 @@ import org.pentaho.mantle.client.messages.Messages;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.Window;
 
 /**
  * Entry point for display schedule dialog.
@@ -60,6 +61,7 @@ public class NewScheduleDialogEntryPoint implements EntryPoint, IResourceBundleL
     };
     NewScheduleDialog dialog = new NewScheduleDialog( reportFile, callback, false );
     dialog.center();
+    Window.alert("Definitely calling center");
   }
 
   public void openBackgroundDialog( String reportFile ) {
